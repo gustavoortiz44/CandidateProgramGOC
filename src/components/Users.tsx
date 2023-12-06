@@ -30,6 +30,7 @@ const Users = () => {
     await reqResApi.get<ReqResListado>('/users')
     .then( resp => {                    
         setUsuarios(resp.data)
+        console.log(JSON.stringify(resp.data, null, 2))
     })
     .catch(console.log)
   }
